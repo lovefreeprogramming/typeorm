@@ -31,20 +31,12 @@ class PlatformTools {
         // if name is not absolute or relative, then try to load package from the node_modules of the directory we are currently in
         // this is useful when we are using typeorm package globally installed and it accesses drivers
         // that are not installed globally
-        try {
-            // switch case to explicit require statements for webpack compatibility.
-            switch (name) {
-                case "mysql":
-                    return require("mysql");
-                default:
-                    return require(name);
-            }
-        }
-        catch (err) {
-            if (!path.isAbsolute(name) && name.substr(0, 2) !== "./" && name.substr(0, 3) !== "../") {
-                return require(path.resolve(process.cwd() + "/node_modules/" + name));
-            }
-            throw err;
+        // switch case to explicit require statements for webpack compatibility.
+        switch (name) {
+            case "mysql":
+                return require("mysql");
+            default:
+                return require(name);
         }
     }
     /**
