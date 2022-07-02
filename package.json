@@ -1,0 +1,29 @@
+{
+  "name": "typeorm",
+  "version": "0.2.99",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "ttsc --build tsconfig.build.json ",
+    "test": "jest"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "buffer": "^5.1.0",
+    "cli-highlight": "^2.0.0",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "glob": "^7.1.2",
+    "js-yaml": "^3.13.1",
+    "mkdirp": "^0.5.1",
+    "sha.js": "^2.4.11",
+    "tslib": "^1.10.0",
+    "xml2js": "^0.4.17",
+    "yargonaut": "^1.1.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "ttypescript": "^1.5.8",
+    "@types/mysql": "^2.15.9"
+  }
+}
