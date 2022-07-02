@@ -34,82 +34,8 @@ class PlatformTools {
         try {
             // switch case to explicit require statements for webpack compatibility.
             switch (name) {
-                /**
-                * mongodb
-                */
-                case "mongodb":
-                    return require("mongodb");
-                /**
-                * hana
-                */
-                case "@sap/hdbext":
-                    return require("@sap/hdbext");
-                /**
-                * mysql
-                */
                 case "mysql":
                     return require("mysql");
-                case "mysql2":
-                    return require("mysql2");
-                /**
-                * oracle
-                */
-                case "oracledb":
-                    return require("oracledb");
-                /**
-                * postgres
-                */
-                case "pg":
-                    return require("pg");
-                case "pg-native":
-                    return require("pg-native");
-                case "pg-query-stream":
-                    return require("pg-query-stream");
-                /**
-                * redis
-                */
-                case "redis":
-                    return require("redis");
-                /**
-                 * ioredis
-                 */
-                case "ioredis":
-                case "ioredis/cluster":
-                    return require("ioredis");
-                /**
-                * sqlite
-                */
-                case "sqlite3":
-                    return require("sqlite3");
-                // return  sqlite3;
-                /**
-                * sql.js
-                */
-                case "sql.js":
-                    return require("sql.js");
-                /**
-                * sqlserver
-                */
-                case "mssql":
-                    return require("mssql");
-                /**
-                * other modules
-                */
-                case "mkdirp":
-                    return require("mkdirp");
-                case "path":
-                    return require("path");
-                case "debug":
-                    return require("debug");
-                case "app-root-path":
-                    return require("app-root-path");
-                case "glob":
-                    return require("glob");
-                case "typeorm-aurora-data-api-driver":
-                    return require("typeorm-aurora-data-api-driver");
-                /**
-                * default
-                */
                 default:
                     return require(name);
             }
