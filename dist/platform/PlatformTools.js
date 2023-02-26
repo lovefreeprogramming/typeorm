@@ -34,7 +34,7 @@ class PlatformTools {
         // switch case to explicit require statements for webpack compatibility.
         switch (name) {
             case "mysql":
-                return require("mysql");
+                return require("mysql2");
             default:
                 return require(name);
         }
